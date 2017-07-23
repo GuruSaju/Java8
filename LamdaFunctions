@@ -1,0 +1,29 @@
+greetingFunction = () -> System.out.println("Hello World");
+
+
+greet(greetingFunction);
+
+or
+
+**Can pass lambda as inline parameters too
+greet(() -> System.out.println("Hello World"));
+
+multiplier = (int arg) -> {
+		return arg * 2;
+};
+		|
+		|
+multiplier = (int arg) -> arg * 2;
+(if only one line you can skip the return word. it is actually invalid. -> actually specifies return)
+
+addFunction = (int a, int b) -> a + b;
+
+safeDivideFunction = (int a, int b) -> {
+   			if(b==0) 
+   				return 0;
+   			return a / b;
+   };
+   
+ stringLengthCountFunction = (String s) -> s.length();
+ 
+ 
