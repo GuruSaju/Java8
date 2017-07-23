@@ -1,5 +1,9 @@
 package guru.java8lambda.com;
-
+/**
+ * 
+ * @author Srisarguru
+ *
+ */
 public class Greeter {
 	
 	public void greet(Greeting greeting) {
@@ -25,11 +29,30 @@ public class Greeter {
 		
 		
 		//Since we already have an interface greeter
-		Greeting greetingLambdaFunction = () -> System.out.println("Hello from greeter");
+		Greeting greetingLambdaFunction = () -> System.out.println("Hello from lambda function");
 	
 		Greeting helloWorldGreeting1 = new HelloWorldGreeting();
 		
 		//Difference between above two lines??
+		
+		helloWorldGreeting.perform();
+		
+		//this is how you execute lambda expressions by calling the interface method on it, just
+		// as if it were an instance of a class. 
+		greetingLambdaFunction.perform();
+		
+		//So we do not need a separate class in order to implement (close) an interface like in HelloWorldGreeting
+		//.java class
+		
+		//But we can do that using an inner class implementation of interface -anonymous class
+		Greeting innerClassGreeting = new Greeting(){
+			public void perform(){
+				System.out.println("Hello from inner anonymous class");
+			}
+		};
+		
+		//Lambdas can also be used as a shortcut to the above inner classes but they have more functionalities.
+		
 	}
 
 }
