@@ -1,3 +1,11 @@
+Why Lambdas?
+
+* Enables functional programming
+* Readable and concise code
+* Easier to use APIand libraries
+* Enables support for parallel processing (parallel stream) 
+
+
 greetingFunction = () -> System.out.println("Hello World");
 
 

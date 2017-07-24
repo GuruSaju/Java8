@@ -1,5 +1,10 @@
 package guru.thisreferencelambda.com;
 
+/**
+ * 
+ * @author Srisarguru
+ *
+ */
 public class ThisReference {
 	
 	public void doProcess(int i, Process p) {
