@@ -58,7 +58,7 @@ public class Greeter {
 }
 
 //Step 1
-
+// Using interface for lambda is very useful for backward compatibility 
 interface MyLambda1{
 	//Step 2 (exact same method signature as the lambda function you want to create)
 	void anyName();

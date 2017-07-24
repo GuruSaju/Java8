@@ -1,0 +1,4 @@
+In java 8 we can have implementation methods in the interface.
+So for lambda the interface can have many implemented methods but only one abstract method. 
+An interface which has only one abstract method and many implemented method is called a functional interface.
+
