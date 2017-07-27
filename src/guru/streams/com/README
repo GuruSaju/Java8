@@ -1,0 +1,24 @@
+Def: A sequence of elements supporting sequential and parallel aggregate operations.
+
+* Sequence of elements - provides sequence of elements on demand and does not store the element
+
+* Source - Streams take Collections, Arrays, I/O resources as input source. 
+
+* Aggregate operations - filter, map, limit, reduce, find, match etc
+
+* Pipelining - stream.filter.forEach. (pipeline of operations)
+
+* Automatic Operations (internal iterator) 
+
+ In a nutshell, collections are about data and streams are about computations.
+
+Consider a movie stored on a DVD. This is a collection (perhaps of bytes or perhaps of frames—we don’t care which here) 
+because it contains the whole data structure. Now consider watching the same video when it is being streamed over the internet. 
+It is now a stream (of bytes or frames). The streaming video player needs to have downloaded only a few frames in advance 
+of where the user is watching, so you can start displaying values from the beginning of the stream before most of the values 
+in the stream have even been computed (consider streaming a live football game).
+
+In the coarsest terms, the difference between collections and streams has to do with when things are computed. A collection 
+is an in-memory data structure, which holds all the values that the data structure currently has—every element in the collection 
+has to be computed before it can be added to the collection. In contrast, a stream is a conceptually fixed data structure in 
+which elements are computed on demand.
