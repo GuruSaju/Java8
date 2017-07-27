@@ -23,6 +23,10 @@ public class RunnableExample {
 		Runnable runnableLambda = () -> System.out.println("Inside runnablelambda");
 		
 		Thread myLambdaThread = new Thread(runnableLambda);
+		//or
+		Thread myLambdaThread1 = new Thread(() -> System.out.println("Inside runnablelambda"));
+		//or method reference can do this but nothing is passed so no use here
+		Thread myLambdaThread2 = new Thread(System.out::println);
 		
 		myLambdaThread.start();
 		
