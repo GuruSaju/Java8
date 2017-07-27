@@ -27,7 +27,9 @@ public class Greeter {
 		//This works
 		MyLambda2 addFunction = (int a, int b) -> a + b;
 		
+		//we can aslo pass arguments without data type
 		
+		MyLambda2 addFunction1 = (a, b) -> a + b;
 		//Since we already have an interface greeter
 		Greeting greetingLambdaFunction = () -> System.out.println("Hello from lambda function");
 	
