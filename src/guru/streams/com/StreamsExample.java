@@ -43,6 +43,7 @@ public class StreamsExample {
 		
 		List<String> strings = Arrays.asList("abc", "", "bc", "efg", "abcd","", "jkl");
 		List<String> filtered = strings.stream().filter(string -> !string.isEmpty()).collect(Collectors.toList());
+		// .collect(Collectors.toList()) because strings has been converted to a stream and has to collect it back as a list. 
 		
 		
 		List<Integer> numbers = Arrays.asList(3, 2, 2, 3, 7, 3, 5);
