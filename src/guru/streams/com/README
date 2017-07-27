@@ -22,3 +22,12 @@ In the coarsest terms, the difference between collections and streams has to do 
 is an in-memory data structure, which holds all the values that the data structure currently has—every element in the collection 
 has to be computed before it can be added to the collection. In contrast, a stream is a conceptually fixed data structure in 
 which elements are computed on demand.
+
+
+Stream operations that can be connected are called intermediate operations. They can be connected together because their return 
+type is a Stream. Operations that close a stream pipeline are called terminal operations. They produce a result from a pipeline 
+such as a List, an Integer, or even void (any non-Stream type).
+
+You might be wondering why the distinction is important. Well, intermediate operations do not perform any processing until a terminal 
+operation is invoked on the stream pipeline; they are “lazy.” This is because intermediate operations can usually be “merged” and 
+processed into a single pass by the terminal operation.
