@@ -31,3 +31,21 @@ such as a List, an Integer, or even void (any non-Stream type).
 You might be wondering why the distinction is important. Well, intermediate operations do not perform any processing until a terminal 
 operation is invoked on the stream pipeline; they are “lazy.” This is because intermediate operations can usually be “merged” and 
 processed into a single pass by the terminal operation.
+
+
+Filtering. There are several operations that can be used to filter elements from a stream: 
+
+filter(Predicate): Takes a predicate (java.util.function.Predicate) as an argument and returns 
+                   a stream including all elements that match the given predicate
+distinct: Returns a stream with unique elements (according to the implementation of equals for a stream element)
+limit(n): Returns a stream that is no longer than the given size n
+skip(n): Returns a stream with the first n number of elements discarded 
+
+ anyMatch, allMatch, and noneMatch operations to help you do this. They all take a predicate as an argument and return a 
+ boolean as the result (they are, therefore, terminal operations). For example, you can use allMatch to check that 
+ all elements in a stream of transactions have a value higher than 100, as shown below
+
+boolean expensive =transactions.stream().allMatch(t -> t.getValue() > 100);
+
+Mapping. Streams support the method map, which takes a function (java.util.function.Function) as an argument to project the 
+elements of a stream into another form. The function is applied to each element, “mapping” it into a new element.
